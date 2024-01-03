@@ -1,13 +1,12 @@
 class Solution:
     def reverseVowels(self, s: str) -> str:
         vowels = 'aeiouAEIOU'
-        vowel_list = list(vowels)
         vowel_index = []
         str_vowels = []
         result = list(s)
 
         for i in range(len(s)):
-            if s[i] in vowel_list:
+            if s[i] in vowels:
                 vowel_index.append(i)
                 str_vowels.append(s[i])
         
