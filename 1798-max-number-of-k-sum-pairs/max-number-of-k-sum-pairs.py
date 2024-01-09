@@ -7,9 +7,8 @@ class Solution:
         nums.sort()
         while left < right:
             if nums[left] + nums[right] == k:
-                nums.pop(right)
-                nums.pop(left)
-                right -= 2
+                left += 1
+                right -= 1
                 cnt += 1
             elif nums[left] + nums[right] < k:
                 left += 1
